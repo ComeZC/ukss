@@ -66,12 +66,17 @@ class SaleData extends \yii\db\ActiveRecord
         $model->andWhere(['>', 'created_at', date("Y-m-d",strtotime('-30day'))]);
 
         $result = $model->groupBy('product_id')->asArray()->all();
+        $result = [
+            ['cnt' => 5, 'name' => 'OnePlus 5 8G+128G Midnight Black'],
+            ['cnt' => 8, 'name' => 'OnePlus 5 8G+128G Slate Gray'],
+            ['cnt' => 12, 'name' => 'OnePlus 5 6G+64G Soft Gold'],
+        ];
 
         $saleProductData = [];
         foreach($result as $k => $v){
             $data = new \stdClass();
             $data->value = $v['cnt'];
-            $data->label = Product::getProductNameById($v['product_id']);
+            $data->label = $v['name'];//Product::getProductNameById($v['product_id']);
 
             $color = self::getRandomColor();
             $data->color = $color;

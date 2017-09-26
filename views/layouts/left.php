@@ -31,10 +31,10 @@
                 'options' => ['class' => 'sidebar-menu'],
                 'items' => [
                     //['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii'], 'visible' => \app\models\User::isAdmin()],
-                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'], 'visible' => \app\models\User::isAdmin()],
+                    /*['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii'], 'visible' => \app\models\User::isAdmin()],
+                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'], 'visible' => \app\models\User::isAdmin()],*/
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
-                    [
+                    /*[
                         'label' => 'Same tools',
                         'icon' => 'share',
                         'url' => '#',
@@ -60,9 +60,10 @@
                             ],
                         ],
                         'visible' => \app\models\User::isAdmin()
-                    ],
-                    ['label' => 'Sale Data', 'icon' => 'database', 'url' => ['/saledata'], 'visible' => !Yii::$app->user->isGuest],
-                    ['label' => 'Sale Target', 'icon' => 'thumbs-up', 'url' => ['/saletarget'], 'visible' => \app\models\User::isAreaManager()],
+                    ],*/
+                    ['label' => 'Dashboard', 'icon' => 'home', 'url' => ['/site'], 'visible' => !Yii::$app->user->isGuest],
+                    ['label' => 'Sales Data', 'icon' => 'database', 'url' => ['/saledata'], 'visible' => !Yii::$app->user->isGuest],
+                    ['label' => 'Sales Target', 'icon' => 'thumbs-up', 'url' => ['/saletarget'], 'visible' => \app\models\User::isAreaManager()],
                     ['label' => 'Staff Management', 'icon' => 'user', 'url' => ['/staff'], 'visible' => \app\models\User::isAreaManager()],
                     ['label' => 'Area Management', 'icon' => 'sitemap', 'url' => ['/area'], 'visible' => \app\models\User::isAreaManager()],
                     ['label' => 'Product Management', 'icon' => 'suitcase', 'url' => ['/product'], 'visible' => \app\models\User::isGeneralManager()],

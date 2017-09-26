@@ -7,15 +7,15 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\models\SaleTargetSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sale Targets';
+$this->title = 'Sales Target';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="sale-target-index box box-primary">
     <?php Pjax::begin(); ?>
     <div class="box-header with-border">
-        <?= Html::a('Create Sale Target', ['create'], ['class' => 'btn btn-success btn-flat']) ?>
+        <?= Html::a('Create Sales Target', ['create'], ['class' => 'btn btn-success btn-flat']) ?>
     </div>
-    <div class="box-body table-responsive no-padding">
+    <div class="box-body table-responsive">
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
         <?= GridView::widget([
             'dataProvider' => $dataProvider,

@@ -22,12 +22,14 @@ class PluginAsset extends AssetBundle
         'datatables/dataTables.bootstrap.min.js',
         //'knob/jquery.knob.js',
         'chartjs/Chart.min.js',
+        'morris/morris.min.js',
         //'daterangepicker/moment.js',
         // more plugin Js here
     ];
     public $css = [
         //'daterangepicker/daterangepicker.css',
         'datatables/dataTables.bootstrap.css',
+        'morris/morris.css',
 
         // more plugin CSS here
     ];
